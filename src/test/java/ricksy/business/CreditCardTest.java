@@ -14,4 +14,10 @@ public class CreditCardTest {
         CreditCard creditcard = new CreditCard("Antonio", "56789654321");
         assertEquals("56789654321", creditcard.number());
     }
+
+    @Test
+    public void getCreditTest() {
+        CreditCard creditcard = new CreditCard("Abradolph Lincler", "4916119711304546");
+        assertEquals(3000, creditcard.credit(), 0);
+    }
 }

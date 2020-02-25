@@ -15,4 +15,8 @@ public class CreditCard {
     public String number() {
         return number;
     }
+
+    public double credit() {
+        return credit;
+    }
 }
