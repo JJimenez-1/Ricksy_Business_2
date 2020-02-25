@@ -27,4 +27,9 @@ public class CreditCard {
             return true;
         } else {return false;}
     }
+
+    @Override
+    public String toString() {
+        return '\n' + "owner: " + owner + '\n' + "number: " + number() + '\n' + "credit: " + credit() + SYMBOL + '\n';
+    }
 }
