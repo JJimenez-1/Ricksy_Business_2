@@ -18,9 +18,6 @@ public class CreditCard {
     public double credit() {
         return credit;
     }
-    public String owner() {
-        return owner;
-    }
 
     public Boolean pay(double credit) {
         if(credit <= 0) {
