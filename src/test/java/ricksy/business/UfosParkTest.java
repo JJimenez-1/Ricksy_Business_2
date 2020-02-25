@@ -4,8 +4,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class UfosParkTest {
-
+    /**
     UfosPark ufos = null;
+     */
     String[] ovnis = { "unx", "dox", "trex" };
 
     /**

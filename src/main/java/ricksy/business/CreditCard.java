@@ -11,4 +11,8 @@ public class CreditCard {
         this.owner = owner;
         this.number = number;
     }
+
+    public String number() {
+        return number;
+    }
 }

@@ -6,5 +6,12 @@ package ricksy.business;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+
 public class CreditCardTest {
+
+    @Test
+    public void getNumberTest() {
+        CreditCard creditcard = new CreditCard("Antonio", "56789654321");
+        assertEquals("56789654321", creditcard.number());
+    }
 }
