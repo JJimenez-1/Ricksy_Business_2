@@ -15,8 +15,16 @@ public class CreditCard {
     public String number() {
         return number;
     }
-
     public double credit() {
         return credit;
+    }
+    public String owner() {
+        return owner;
+    }
+
+    public Boolean pay(double credit) {
+        if(credit <= 0) {
+            return true;
+        } else {return false;}
     }
 }
