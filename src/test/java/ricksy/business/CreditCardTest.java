@@ -7,8 +7,4 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CreditCardTest {
-    @Test public void testAppHasAGreeting() {
-        RicksyBusiness classUnderTest = new RicksyBusiness();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
-    }
 }
