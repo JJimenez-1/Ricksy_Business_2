@@ -20,7 +20,8 @@ public class CreditCard {
     }
 
     public Boolean pay(double credit) {
-        if(credit <= 0) {
+        if((credit()  - credit) >= 0) {
+            this.credit -= credit;
             return true;
         } else {return false;}
     }

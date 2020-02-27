@@ -24,6 +24,13 @@ public class CreditCardTest {
     @Test
     public void paySiHayDineroTest() {
         CreditCard creditcard = new CreditCard("Devil Morty", "7534123415");
+        creditcard.pay(200);
         assertTrue(true);
+    }
+
+    @Test public void payNoHayDineroTest() {
+        CreditCard creditcard = new CreditCard("Devil Morty", "7534123415");
+        creditcard.pay(3000);
+        assertTrue(false);
     }
 }
