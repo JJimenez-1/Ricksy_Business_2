@@ -35,7 +35,7 @@ public class UfosParkTest {
         for (String ovni : ovnis) {
             park.add(ovni);
             park.dispatch(creditcard);
-            assertEquals("unx" , park.getUfoOf(creditcard.number()));
+            assertEquals(2500 , creditcard.credit(), 0.001);
         }
     }
 
@@ -46,7 +46,9 @@ public class UfosParkTest {
      */
     @Test
     public void dispatchNoCreditTest() {
-
+        UfosPark park = new UfosPark();
+        CreditCard creditcard = new CreditCard("Hitler", "444444");
+        double nocredito = creditcard.credit() - 3000;
     }
 
     /**
@@ -56,6 +58,7 @@ public class UfosParkTest {
      */
     @Test
     public void dispatchUfoAlreadyReservedTest() {
+
     }
 
     /**
@@ -72,5 +75,13 @@ public class UfosParkTest {
      */
     @Test
     public void getUfoOfTest() {
+        UfosPark park = new UfosPark();
+        CreditCard creditcard = new CreditCard("Devil Morty", "45453");
+
+        for (String ovni : ovnis) {
+            park.add(ovni);
+            park.dispatch(creditcard);
+            assertEquals("unx", park.getUfoOf(creditcard.number()));
+        }
     }
 }
