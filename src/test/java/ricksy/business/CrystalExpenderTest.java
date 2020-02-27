@@ -19,4 +19,12 @@ public class CrystalExpenderTest {
         assertEquals(2, crystalexpender.stock());
     }
 
+    @Test
+    public void dispatchNoHayStock() {
+        CrystalExpender crystalexpender = new CrystalExpender(0, 50);
+        CreditCard creditcard = new CreditCard("Honey" , "123");
+        crystalexpender.dispatch(creditcard);
+        assertEquals(0, crystalexpender.stock());
+    }
+
 }
