@@ -30,7 +30,13 @@ public class UfosParkTest {
      */
     @Test
     public void dispatchTest() {
-
+        UfosPark park = new UfosPark();
+        CreditCard creditcard = new CreditCard("Hitler", "444444");
+        for (String ovni : ovnis) {
+            park.add(ovni);
+            park.dispatch(creditcard);
+            assertEquals("unx" , park.getUfoOf(creditcard.number()));
+        }
     }
 
     /**
@@ -40,6 +46,7 @@ public class UfosParkTest {
      */
     @Test
     public void dispatchNoCreditTest() {
+
     }
 
     /**
