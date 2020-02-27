@@ -2,6 +2,8 @@ package ricksy.business;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
 
 public class UfosPark {
 
@@ -39,5 +41,11 @@ public class UfosPark {
 
     Map<String, String> getFlota() {
         return this.flota;
+    }
+
+    @Override
+    public String toString() {
+        List<String> listNumbers = new ArrayList<String>(flota.keySet());
+        return listNumbers.toString();
     }
 }
