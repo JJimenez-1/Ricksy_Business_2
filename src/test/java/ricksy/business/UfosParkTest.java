@@ -15,6 +15,11 @@ public class UfosParkTest {
      */
     @Test
     public void addUfoTest() {
+        UfosPark park = new UfosPark();
+        for (String ovni : ovnis) {
+            park.add(ovni);
+        }
+        assertEquals(3, park.getFlota().size());
     }
 
     /**
@@ -25,6 +30,7 @@ public class UfosParkTest {
      */
     @Test
     public void dispatchTest() {
+
     }
 
     /**
