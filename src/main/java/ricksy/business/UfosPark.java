@@ -12,10 +12,18 @@ public class UfosPark {
 
     public UfosPark() {}
 
+    /**
+     * Añade un ufo a la flota de ufos
+     * @param ufo es el ufo que se va ha añadir en la flota de ufos
+     */
     public void add (String ufo) {
         flota.put(ufo, null);
     }
 
+    /**
+     * Comprueba si la persona puede comprar el ufo
+     * @param creditcard es la tarjeta de credito de la persona que quiere comprar el ufo
+     */
     public void dispatch(CreditCard creditcard) {
         for (String ufo : flota.keySet()) {
             if (flota.get(ufo) == null) {
@@ -29,6 +37,11 @@ public class UfosPark {
          }
     }
 
+    /**
+     * Da un ufo que la persona puede alquilar.
+     * @param creditcard es la tarjeta de credito de la persona (comprueba si hay dinero)
+     * @return devuelve el nombre del ufo, si es posible obtenerlo
+     */
     public String getUfoOf(String creditcard) {
         String ufoName = null;
         for (String ufo : flota.keySet()) {

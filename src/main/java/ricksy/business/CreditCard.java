@@ -7,6 +7,7 @@ public class CreditCard {
     private double credit = 3000.0d;
     private String SYMBOL = "EZI";
 
+
     CreditCard(String owner, String number) {
         this.owner = owner;
         this.number = number;
@@ -19,12 +20,18 @@ public class CreditCard {
         return credit;
     }
 
+    /**
+     * Comprueba si tiene credito
+     * @param credit total credito de la persona
+     * @return puede devolver true, significa que hay dinero o false, si no tiene dinero
+     */
     public Boolean pay(double credit) {
         if((credit()  - credit) >= 0) {
             this.credit -= credit;
             return true;
         } else {return false;}
     }
+
 
     @Override
     public String toString() {
